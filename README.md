@@ -75,44 +75,46 @@ Dataset terdiri dari tiga file utama:
 3. **sample_submission.csv** — format pengumpulan hasil prediksi untuk diunggah ke Kaggle.
 
 ### 1. Deskripsi Fitur
- |Nama Fitur                     |Tipe Data               |Deskripsi                                                 |
- --------------------------------------------------------------------------------------------------------------------
- |`id`                           |`object`                |ID unik karyawan untuk identifikasi.                      |
- |`Age`                          |`int64`                 |Usia karyawan.                                            |
- |`BusinessTravel`               |`object`                |Frekuensi perjalanan dinas karyawan.                      |
- |`DailyRate`                    |`int64`                 |Gaji harian.                                              |
- |`Department`                   |`object`                |Departemen tempat karyawan bekerja.                       |
- |`DistanceFromHome`             |`int64`                 |Jarak tempat tinggal karyawan ke kantor.                  |
- |`Education`                    |`int64`                 |Tingkat Pendidikan Terakhir.                              | 
- |`EducationField`               |`object`                |Bidang studi terakhir karyawan.                           |
- |`EmployeeCount`                |`int64`                 |Jumlah total karyawan dalam perusahaan.                   |
- |`EmployeeNumber`               |`int64`                 |Nomor unik karyawan dalam sistem HR.                      |
- |`EnvironmentSatisfaction`      |`int64`                 |Tingkat kepuasan terhadap lingkungan kerja.               |
- |`Gender`                       |`object`                |Jenis kelamin karyawan.                                   | 
- |`HourlyRate`                   |`int64`                 |Upah per jam.                                             |
- |`JobInvolvement`               |`int64`                 |Tingkat keterlibatan pekerjaan.                           |
- |`JobLevel`                     |`int64`                 |Level jabatan karyawan.                                   |
- |`JobRole`                      |`object`                |Posisi atau jabatan spesifik karyawan.                    |  
- |`JobSatisfaction`              |`int64`                 |Tingkat Kepuasan pekerjaan.                               |
- |`MaritalStatus`                |`object`                |Status Pernikahan.                                        |
- |`MonthlyIncome`                |`int64`                 |Gaji Bulanan Karyawan.                                    |
- |`MonthlyRate`                  |`int64`                 |Tarif kompensasi bulanan.                                 |
- |`NumCompaniesWorked`           |`int64`                 |Jumlah perusahaan tempat karyawan pernah bekerja.         | 
- |`Over18`                       |`object`                |Status usia di atas 18 tahun (selalu Y dalam dataset).    |
- |`OverTime`                     |`object`                |Apakah karyawan sering lembur.                            |
- |`PercentSalaryHike`            |`int64`                 |Persentase kenaikan gaji tahunan terakhir.                |
- |`PerformanceRating`            |`int64`                 |Penilaian kinerja terakhir.                               |
- |`RelationshipSatisfaction`     |`int64`                 |Tingkat kepuasan terhadap hubungan kerja.                 |
- |`StandardHours`                |`int64`                 |Jam kerja standar (selalu 80 dalam dataset).              |
- |`StockOptionLevel`             |`int64`                 |Level kepemilikan saham perusahaan.                       |
- |`TotalWorkingYears`            |`int64`                 |Total tahun pengalaman kerja karyawan.                    |
- |`TrainingTimesLastYear`        |`int64`                 |Jumlah pelatihan yang diikuti dalam setahun terakhir.     |
- |`WorkLifeBalance`              |`int64`                 |Tingkat keseimbangan kerja–hidup.                         |
- |`YearsAtCompany`               |`int64`                 |Total tahun bekerja di perusahaan saat ini.               |
- |`YearsInCurrentRole`           |`int64`                 |Total tahun di posisi atau jabatan saat ini.              |
- |`YearsSinceLastPromotion`      |`int64`                 |Tahun sejak promosi terakhir.                             |
- |`YearsWithCurrManager `        |`int64`                 |Tahun bekerja dengan manajer saat ini.                    |
- |`Attrition`                    |`int64`                 |Target: apakah karyawan keluar dari perusahaan.           |
+
+| Nama Fitur                 | Tipe Data | Deskripsi                                       |
+| -------------------------- | --------- | ----------------------------------------------- |
+| `id`                       | object    | ID unik karyawan untuk identifikasi.            |
+| `Age`                      | int64     | Usia karyawan.                                  |
+| `BusinessTravel`           | object    | Frekuensi perjalanan dinas karyawan.            |
+| `DailyRate`                | int64     | Gaji harian.                                    |
+| `Department`               | object    | Departemen tempat karyawan bekerja.             |
+| `DistanceFromHome`         | int64     | Jarak tempat tinggal ke kantor.                 |
+| `Education`                | int64     | Tingkat pendidikan formal terakhir.             |
+| `EducationField`           | object    | Bidang studi pendidikan terakhir.               |
+| `EmployeeCount`            | int64     | Jumlah total karyawan (nilai sama untuk semua). |
+| `EmployeeNumber`           | int64     | Nomor unik karyawan dalam sistem HR.            |
+| `EnvironmentSatisfaction`  | int64     | Kepuasan terhadap lingkungan kerja.             |
+| `Gender`                   | object    | Jenis kelamin karyawan.                         |
+| `HourlyRate`               | int64     | Upah per jam.                                   |
+| `JobInvolvement`           | int64     | Tingkat keterlibatan pekerjaan.                 |
+| `JobLevel`                 | int64     | Level jabatan.                                  |
+| `JobRole`                  | object    | Nama jabatan spesifik.                          |
+| `JobSatisfaction`          | int64     | Tingkat kepuasan kerja.                         |
+| `MaritalStatus`            | object    | Status pernikahan.                              |
+| `MonthlyIncome`            | int64     | Pendapatan bulanan.                             |
+| `MonthlyRate`              | int64     | Tarif kompensasi bulanan.                       |
+| `NumCompaniesWorked`       | int64     | Jumlah perusahaan sebelumnya.                   |
+| `Over18`                   | object    | Status usia >18 tahun (selalu Y).               |
+| `OverTime`                 | object    | Apakah sering lembur.                           |
+| `PercentSalaryHike`        | int64     | Persentase kenaikan gaji terakhir.              |
+| `PerformanceRating`        | int64     | Penilaian kinerja.                              |
+| `RelationshipSatisfaction` | int64     | Kepuasan hubungan kerja.                        |
+| `StandardHours`            | int64     | Jam kerja standar (selalu 80).                  |
+| `StockOptionLevel`         | int64     | Level opsi saham.                               |
+| `TotalWorkingYears`        | int64     | Total pengalaman kerja.                         |
+| `TrainingTimesLastYear`    | int64     | Jumlah pelatihan tahun terakhir.                |
+| `WorkLifeBalance`          | int64     | Keseimbangan kerja–hidup.                       |
+| `YearsAtCompany`           | int64     | Lama bekerja di perusahaan saat ini.            |
+| `YearsInCurrentRole`       | int64     | Lama di posisi saat ini.                        |
+| `YearsSinceLastPromotion`  | int64     | Tahun sejak promosi terakhir.                   |
+| `YearsWithCurrManager`     | int64     | Lama bekerja dengan manajer saat ini.           |
+| `Attrition`                | int64     | Target: apakah karyawan resign.                 |
+
 
 Berdasarkan karakteristik datanya, fitur dapat dikelompokkan menjadi beberapa kategori utama:
 
@@ -285,14 +287,14 @@ search.fit(X_train, y_train)
 
 Proses tuning menghasilkan hasil sebagai berikut (ringkasan):
 
-| Model                | CV AUC     | Validation AUC | Keterangan            |
-------------------------------------------------------------------------------
-| Logistic Regression  | 0.8329     | 0.8319         | Model linear baseline |
-| Random Forest        | **0.8039** | **0.8408**     | Model terbaik         |
-| XGBoost              | 0.8221     | 0.7969         | Sedikit overfitting   |
-| LightGBM             | 0.8139     | 0.7726         | Performa lebih rendah |
+| Model               | CV AUC     | Validation AUC | Keterangan            |
+| ------------------- | ---------- | -------------- | --------------------- |
+| Logistic Regression | 0.8329     | 0.8319         | Model linear baseline |
+| Random Forest       | **0.8039** | **0.8448**     | Model terbaik         |
+| XGBoost             | 0.8221     | 0.7969         | Sedikit overfitting   |
+| LightGBM            | 0.8139     | 0.7726         | Performa lebih rendah |
 
-Model terbaik yang dipilih adalah **Random Forest**, karena memberikan hasil **Validation ROC-AUC = 0.8408** dan performa yang stabil di berbagai subset data.
+Model terbaik yang dipilih adalah **Random Forest**, karena memberikan hasil **Validation ROC-AUC = 0.8448** dan performa yang stabil di berbagai subset data.
 
 ---
 
@@ -314,16 +316,16 @@ plt.legend(); plt.title("ROC Curve")
 plt.xlabel("FPR"); plt.ylabel("TPR"); plt.grid(True); plt.show()
 ```
 
-![Hasil ROC-AUC](images/ROC-AUC.png)
+![Hasil ROC-AUC](images/Evaluasi.png)
 
-Dari hasil pengujian, **Random Forest** menunjukkan keseimbangan baik antara sensitivitas dan spesifisitas, dengan **Validation ROC-AUC sebesar 0.8408**, yang berarti model mampu memisahkan karyawan yang berpotensi keluar dan yang bertahan dengan cukup baik.
+Dari hasil pengujian, **Random Forest** menunjukkan keseimbangan baik antara sensitivitas dan spesifisitas, dengan **Validation ROC-AUC sebesar 0.8448**, yang berarti model mampu memisahkan karyawan yang berpotensi keluar dan yang bertahan dengan cukup baik.
 
 ---
 
 ## Conclusion
 
 - Proses *data preparation* yang meliputi imputasi, encoding, dan scaling berhasil menghasilkan dataset yang siap digunakan untuk pemodelan tanpa adanya missing value atau duplikasi data.  
-- Beberapa model telah diuji, dan hasil menunjukkan bahwa **Random Forest** memberikan performa terbaik dengan **Validation ROC-AUC sebesar 0.8408**.  
+- Beberapa model telah diuji, dan hasil menunjukkan bahwa **Random Forest** memberikan performa terbaik dengan **Validation ROC-AUC sebesar 0.8448**.  
 - Nilai ROC-AUC yang tinggi menunjukkan bahwa model mampu membedakan dengan baik antara karyawan yang berpotensi keluar dan yang tetap bertahan.  
 - Tahapan evaluasi menunjukkan bahwa model memiliki keseimbangan yang baik antara sensitivitas dan spesifisitas, serta dapat digunakan sebagai dasar untuk analisis lebih lanjut.  
 
