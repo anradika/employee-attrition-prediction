@@ -144,10 +144,10 @@ Tahap pertama dilakukan untuk memahami karakteristik dataset secara umum. Datase
 ### 2. Pemeriksaan Missing Values dan Duplikasi  
 Pengecekan awal menunjukkan bahwa **tidak terdapat data hilang (missing value)** maupun **data duplikat** di seluruh kolom. Hal ini berarti dataset sudah lengkap dan siap digunakan tanpa proses imputasi tambahan.
 
-| Jenis Pemeriksaan  | Hasil     |
----------------------------
-| Missing Values     | Tidak ada |
-| Data Duplikat      | Tidak ada |
+| Jenis Pemeriksaan | Hasil     |
+|------------------|-----------|
+| Missing Values    | Tidak ada |
+| Data Duplikat     | Tidak ada |
 
 ### 3. Analisis Nilai Unik  
 Setiap kolom diperiksa untuk memastikan variasi nilai informatif. Ditemukan tiga kolom yang hanya memiliki satu nilai unik untuk seluruh baris, yaitu:  
@@ -160,9 +160,9 @@ Karena kolom-kolom tersebut **tidak mengandung variasi informasi**, maka dihapus
 ### 4. Distribusi Target (`Attrition`)  
 Proporsi karyawan yang keluar dari perusahaan relatif kecil dibandingkan yang bertahan.  
 Hal ini menunjukkan adanya **ketidakseimbangan kelas (class imbalance)** yang perlu diperhatikan pada tahap modeling melalui penggunaan metode **SMOTE** atau pengaturan **`class_weight='balanced'`**.
-<br/>
 
 ![Distribusi Attrition](images/Attrition.png)
+
 Pada tahap eksplorasi awal data, dilakukan analisis untuk memahami karakteristik karyawan yang bertahan dan yang melakukan resign (Attrition). Hasil analisis menunjukkan bahwa jumlah karyawan yang keluar jauh lebih sedikit dibanding yang tetap bekerja, sehingga terdapat ketidakseimbangan data (imbalanced). Kondisi ini membuat metrik evaluasi seperti ROC-AUC lebih sesuai dibandingkan accuracy karena dapat menangani distribusi target yang tidak seimbang.
 
 ### 5. `Attrition` berdasarkan jabatan
