@@ -195,7 +195,7 @@ Attrition cenderung lebih tinggi pada karyawan dengan pendapatan lebih rendah. K
 
 Karyawan yang sering melakukan lembur menunjukkan tingkat attrition yang lebih tinggi. Beban kerja yang tinggi dapat menurunkan keseimbangan kehidupan dan pekerjaan (work-life balance) sehingga memicu keinginan untuk resign.
 
-### 10. Dampak `OverTime` terhadap `Attrition`
+### 10. Korelasi Variabel Numerik
 
 ![Heatmap](images/Heatmap.png)
 
