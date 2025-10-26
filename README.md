@@ -314,7 +314,7 @@ plt.legend(); plt.title("ROC Curve")
 plt.xlabel("FPR"); plt.ylabel("TPR"); plt.grid(True); plt.show()
 ```
 
-<img src="img/eval_roc_curve.png" alt="ROC Curve" />
+![Hasil ROC-AUC](images/ROC-AUC.png)
 
 Dari hasil pengujian, **Random Forest** menunjukkan keseimbangan baik antara sensitivitas dan spesifisitas, dengan **Validation ROC-AUC sebesar 0.8448**, yang berarti model mampu memisahkan karyawan yang berpotensi keluar dan yang bertahan dengan cukup baik.
 
