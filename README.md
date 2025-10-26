@@ -13,7 +13,7 @@
   - [Project Benefits](#project-benefits)
 - [Data Understanding](#data-understanding)
   - [Deskripsi Fitur](#deskripsi-fitur)
-  - [Penjelasan Kontekstual Fitur]
+  - [Penjelasan Kontekstual Fitur](#penjelasan-kontekstual-fitur) 
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
   - [Pemeriksaan Data Awal](#pemeriksaan-data-awal)
   - [Pemeriksaan Missing Values dan Duplikasi](#pemeriksaan-missing-values-dan-duplikasi)
@@ -288,11 +288,11 @@ Proses tuning menghasilkan hasil sebagai berikut (ringkasan):
 | Model                | CV AUC     | Validation AUC | Keterangan            |
 ------------------------------------------------------------------------------
 | Logistic Regression  | 0.8329     | 0.8319         | Model linear baseline |
-| Random Forest        | **0.8039** | **0.8448**     | Model terbaik         |
+| Random Forest        | **0.8039** | **0.8408**     | Model terbaik         |
 | XGBoost              | 0.8221     | 0.7969         | Sedikit overfitting   |
 | LightGBM             | 0.8139     | 0.7726         | Performa lebih rendah |
 
-Model terbaik yang dipilih adalah **Random Forest**, karena memberikan hasil **Validation ROC-AUC = 0.8448** dan performa yang stabil di berbagai subset data.
+Model terbaik yang dipilih adalah **Random Forest**, karena memberikan hasil **Validation ROC-AUC = 0.8408** dan performa yang stabil di berbagai subset data.
 
 ---
 
@@ -316,14 +316,14 @@ plt.xlabel("FPR"); plt.ylabel("TPR"); plt.grid(True); plt.show()
 
 ![Hasil ROC-AUC](images/ROC-AUC.png)
 
-Dari hasil pengujian, **Random Forest** menunjukkan keseimbangan baik antara sensitivitas dan spesifisitas, dengan **Validation ROC-AUC sebesar 0.8448**, yang berarti model mampu memisahkan karyawan yang berpotensi keluar dan yang bertahan dengan cukup baik.
+Dari hasil pengujian, **Random Forest** menunjukkan keseimbangan baik antara sensitivitas dan spesifisitas, dengan **Validation ROC-AUC sebesar 0.8408**, yang berarti model mampu memisahkan karyawan yang berpotensi keluar dan yang bertahan dengan cukup baik.
 
 ---
 
 ## Conclusion
 
 - Proses *data preparation* yang meliputi imputasi, encoding, dan scaling berhasil menghasilkan dataset yang siap digunakan untuk pemodelan tanpa adanya missing value atau duplikasi data.  
-- Beberapa model telah diuji, dan hasil menunjukkan bahwa **Random Forest** memberikan performa terbaik dengan **Validation ROC-AUC sebesar 0.8448**.  
+- Beberapa model telah diuji, dan hasil menunjukkan bahwa **Random Forest** memberikan performa terbaik dengan **Validation ROC-AUC sebesar 0.8408**.  
 - Nilai ROC-AUC yang tinggi menunjukkan bahwa model mampu membedakan dengan baik antara karyawan yang berpotensi keluar dan yang tetap bertahan.  
 - Tahapan evaluasi menunjukkan bahwa model memiliki keseimbangan yang baik antara sensitivitas dan spesifisitas, serta dapat digunakan sebagai dasar untuk analisis lebih lanjut.  
 
