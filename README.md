@@ -160,7 +160,47 @@ Karena kolom-kolom tersebut **tidak mengandung variasi informasi**, maka dihapus
 ### 4. Distribusi Target (`Attrition`)  
 Proporsi karyawan yang keluar dari perusahaan relatif kecil dibandingkan yang bertahan.  
 Hal ini menunjukkan adanya **ketidakseimbangan kelas (class imbalance)** yang perlu diperhatikan pada tahap modeling melalui penggunaan metode **SMOTE** atau pengaturan **`class_weight='balanced'`**.
-!(images/Distribusi Attrition.png)
+<br/>
+
+![Distribusi Attrition](images/Attrition.png)
+Pada tahap eksplorasi awal data, dilakukan analisis untuk memahami karakteristik karyawan yang bertahan dan yang melakukan resign (Attrition). Hasil analisis menunjukkan bahwa jumlah karyawan yang keluar jauh lebih sedikit dibanding yang tetap bekerja, sehingga terdapat ketidakseimbangan data (imbalanced). Kondisi ini membuat metrik evaluasi seperti ROC-AUC lebih sesuai dibandingkan accuracy karena dapat menangani distribusi target yang tidak seimbang.
+
+### 5. `Attrition` berdasarkan jabatan
+
+![Attrition berdasarkan Jabatan](images/AttritionJobRole.png)
+
+Ketika dibandingkan antar jabatan, tingkat attrition lebih tinggi ditemukan pada posisi operasional seperti **Sales Representatives** dan **Laboratory Technicians**, sementara posisi seperti manajemen dan research director memiliki tingkat attrition lebih rendah. Hal ini menunjukkan adanya kemungkinan beban kerja yang lebih tinggi atau tingkat kepuasan yang lebih rendah pada role operasional.
+
+### 6. `Attrition` berdasarkan usia (`AgeGroup`)
+
+![Attrition berdasarkan Usia](images/AttritionAge.png)
+
+Karyawan yang berusia **di bawah 30 tahun** mendominasi kontribusi attrition. Pada usia tersebut, karyawan cenderung masih mencari kesempatan yang lebih baik dalam hal gaji maupun jenjang karier sehingga lebih mudah berpindah pekerjaan dibandingkan mereka yang usianya lebih senior.
+
+### 7. `Attrition` berdasarkan Lama Bekerja (`YearsAtCompany`)
+
+![Attrition berdasarkan Lama Bekerja](images/AttritionYearsAtCompany.png)
+
+Ditemukan bahwa karyawan yang baru bekerja beberapa tahun lebih rentan untuk mengundurkan diri. Fase awal bekerja merupakan periode rawan turnover karena adaptasi dan ekspektasi karier yang belum terpenuhi.
+
+### 8. Pengaruh pendapatan (`MonthlyIncome`) terhadap `Attrition`
+
+![Attrition berdasarkan Pendapatan](images/AttritionMonthlyIncome.png)
+
+Attrition cenderung lebih tinggi pada karyawan dengan pendapatan lebih rendah. Karyawan berpenghasilan tinggi lebih cenderung bertahan karena merasa lebih stabil secara finansial, sehingga kompensasi merupakan faktor yang perlu menjadi perhatian perusahaan dalam strategi retensi.
+
+### 9. Dampak `OverTime` terhadap `Attrition`
+
+![Attrition berdasarkan OverTime](images/AttritionOverTime.png)
+
+Karyawan yang sering melakukan lembur menunjukkan tingkat attrition yang lebih tinggi. Beban kerja yang tinggi dapat menurunkan keseimbangan kehidupan dan pekerjaan (work-life balance) sehingga memicu keinginan untuk resign.
+
+### 10. Dampak `OverTime` terhadap `Attrition`
+
+![Heatmap](images/Heatmap.png)
+
+Heatmap korelasi menunjukkan bahwa variabel seperti **OverTime** memiliki **korelasi positif terhadap attrition**, sedangkan **MonthlyIncome, Age, dan YearsAtCompany memiliki korelasi negatif**. Hal ini berarti semakin besar pengalaman, usia, dan kompensasi seorang karyawan, semakin kecil kemungkinan ia untuk keluar.
+
 ---
 
 ## Data Preparation
