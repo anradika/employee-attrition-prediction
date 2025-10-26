@@ -160,7 +160,7 @@ Karena kolom-kolom tersebut **tidak mengandung variasi informasi**, maka dihapus
 ### 4. Distribusi Target (`Attrition`)  
 Proporsi karyawan yang keluar dari perusahaan relatif kecil dibandingkan yang bertahan.  
 Hal ini menunjukkan adanya **ketidakseimbangan kelas (class imbalance)** yang perlu diperhatikan pada tahap modeling melalui penggunaan metode **SMOTE** atau pengaturan **`class_weight='balanced'`**.
-
+!(images/Distribusi Attrition.png)
 ---
 
 ## Data Preparation
